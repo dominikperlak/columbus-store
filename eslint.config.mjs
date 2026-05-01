@@ -13,6 +13,18 @@ const eslintConfig = defineConfig([
     "build/**",
     "next-env.d.ts",
   ]),
+  {
+    files: ["**/*.ts", "**/*.tsx", "**/*.mjs"],
+    rules: {
+      quotes: ["error", "double"],
+      "jsx-quotes": ["error", "prefer-double"],
+      "no-trailing-spaces": "error",
+      "no-multiple-empty-lines": ["error", { max: 1, maxEOF: 0 }],
+      "no-console": "warn",
+      eqeqeq: "error",
+      "no-unused-vars": "error",
+    },
+  },
 ]);
 
 export default eslintConfig;
