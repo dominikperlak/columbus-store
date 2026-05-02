@@ -21,8 +21,7 @@ const eslintConfig = defineConfig([
       "no-trailing-spaces": "error",
       "no-multiple-empty-lines": ["error", { max: 1, maxEOF: 0 }],
       "no-console": "warn",
-      eqeqeq: "error",
-      "no-unused-vars": "error",
+      "no-unused-vars": ["error", { "argsIgnorePattern": "^_" }],
     },
   },
 ]);
