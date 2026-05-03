@@ -11,7 +11,6 @@
   ## Setup
 
 ```bash
-cp .env.example .env
 yarn install
-yarn dev
+yarn run dev
 ```
