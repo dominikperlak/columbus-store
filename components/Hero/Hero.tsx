@@ -3,13 +3,13 @@
 import { Product } from "@/types/api";
 import ProductList from "@/components/ProductList/ProductList";
 import { useCart } from "@/context/CartContext";
-import styles from "./ProductSection.module.css";
+import styles from "./Hero.module.css";
 
 type Props = {
   products: Product[];
 };
 
-const ProductSection = ({ products }: Props) => {
+const Hero = ({ products }: Props) => {
   const { addToCart } = useCart();
 
   return (
@@ -38,4 +38,4 @@ const ProductSection = ({ products }: Props) => {
   );
 };
 
-export default ProductSection;
+export default Hero;

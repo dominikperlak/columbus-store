@@ -6,15 +6,17 @@ import AddToCartButton from "@/components/AddToCartButton/AddToCartButton";
 import styles from "./page.module.css";
 
 type Props = {
-  params: Promise<{ articleNumber: string }>;
+  params: Promise<{ id: string }>;
 };
 
 const ProductPage = async ({ params }: Props) => {
-  const { articleNumber } = await params;
+  const { id } = await params;
   const { products } = await fetchProducts();
-  const product = products.find((p) => p.articleNumber === articleNumber);
+  const product = products.find((p) => p.articleNumber === id);
 
-  if (!product) notFound();
+  if (!product) {
+    notFound();
+  }
 
   const { image, brandName, title, description, price, promotion } = product;
   const discountedPrice = promotion

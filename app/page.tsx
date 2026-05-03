@@ -1,9 +1,9 @@
 import { fetchProducts } from "@/lib/api";
-import ProductSection from "@/components/ProductSection/ProductSection";
+import Hero from "@/components/Hero/Hero";
 
 const Home = async () => {
   const { products } = await fetchProducts();
-  return <ProductSection products={products} />;
+  return <Hero products={products} />;
 };
 
 export default Home;
