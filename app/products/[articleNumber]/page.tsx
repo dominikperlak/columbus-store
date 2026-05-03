@@ -2,7 +2,7 @@ import { fetchProducts } from "@/lib/api";
 import { notFound } from "next/navigation";
 import Image from "next/image";
 import Link from "next/link";
-import AddToCartButton from "./AddToCartButton";
+import AddToCartButton from "@/components/AddToCartButton/AddToCartButton";
 import styles from "./page.module.css";
 
 type Props = {
