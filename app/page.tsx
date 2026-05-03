@@ -1,14 +1,9 @@
-  import { fetchProducts } from "@/lib/api";
-  import ProductSection from "@/components/ProductSection/ProductSection";
+import { fetchProducts } from "@/lib/api";
+import ProductSection from "@/components/ProductSection/ProductSection";
 
-  const Home = async () => {
-    const { products } = await fetchProducts();
+const Home = async () => {
+  const { products } = await fetchProducts();
+  return <ProductSection products={products} />;
+};
 
-    return (
-      <main>
-        <ProductSection products={products} />
-      </main>
-    );
-  };
-
-  export default Home;
+export default Home;

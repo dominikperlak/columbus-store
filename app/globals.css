@@ -1,16 +1,27 @@
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+:root {
+  --color-bg: #f7f5f0;
+  --color-surface: #eeebe3;
+  --color-card: #e4e0d8;
+  --color-border: #e0dcd4;
+  --color-text: #0f0d0a;
+  --color-muted: #888;
+  --color-soft: #999;
+  --color-accent: #c8152b;
+  --color-accent-hover: #a01020;
+  --color-success: #1e6b3a;
+  --color-discount-pill: #fef2f2;
 }
 
 html {
+  scroll-behavior: smooth;
   height: 100%;
 }
 
@@ -21,20 +32,14 @@ body {
 }
 
 body {
-  min-height: 100%;
+  min-height: 100vh;
   display: flex;
   flex-direction: column;
-  color: var(--foreground);
-  background: var(--background);
-  font-family: Arial, Helvetica, sans-serif;
+  background: var(--color-bg);
+  color: var(--color-text);
+  font-family: var(--font-body, system-ui, sans-serif);
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-}
-
-* {
-  box-sizing: border-box;
-  padding: 0;
-  margin: 0;
 }
 
 a {
@@ -42,8 +47,38 @@ a {
   text-decoration: none;
 }
 
-@media (prefers-color-scheme: dark) {
-  html {
-    color-scheme: dark;
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes fadeUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes badgePop {
+  0%,
+  100% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.5);
   }
 }

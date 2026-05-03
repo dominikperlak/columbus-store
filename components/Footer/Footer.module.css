@@ -1,0 +1,26 @@
+.footer {
+  background: var(--color-text);
+  padding: 40px 0;
+  margin-top: auto;
+}
+
+.inner {
+  max-width: 1320px;
+  margin: 0 auto;
+  padding: 0 40px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo {
+  font-family: var(--font-display);
+  font-size: 28px;
+  letter-spacing: 5px;
+  color: var(--color-bg);
+}
+
+.copy {
+  font-size: 12px;
+  color: #666;
+}
