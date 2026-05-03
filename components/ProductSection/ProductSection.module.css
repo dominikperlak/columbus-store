@@ -71,3 +71,11 @@
   font-size: 13px;
   color: var(--color-soft);
 }
+
+@media (min-width: 1921px) {
+  .heroWatermark {
+    right: auto;
+    left: 60%;
+    transform: translateX(-50%) translateY(-50%);
+  }
+}
