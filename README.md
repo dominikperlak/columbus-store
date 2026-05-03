@@ -10,6 +10,8 @@
 
   ## Setup
 
-  cp .env.example .env
-  yarn install
-  yarn dev
+```bash
+cp .env.example .env
+yarn install
+yarn dev
+```
